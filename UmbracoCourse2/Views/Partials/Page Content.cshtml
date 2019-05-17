@@ -1,0 +1,3 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+var pageContent = Model.Content.Children(new[] { "pageContent" }).FirstOrDefault();
