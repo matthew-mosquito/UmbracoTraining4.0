@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+
+@{ 
+    Response.Redirect(Model.Content.Parent.Url, false);
+    Context.ApplicationInstance.CompleteRequest(); 
+}

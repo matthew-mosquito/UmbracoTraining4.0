@@ -1,9 +1,16 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.AdvancedPage>
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.StandardPage>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
 	Layout = null;
 }
 
+
+<!-- Standard Page Properties -->
+<h1>@Umbraco.Field("heading")</h1>
+
+@Umbraco.Field("image")
+
+<!-- SEO Page Properties -->
 <h1>@Umbraco.Field("metaTitle")</h1>
 
 <p>@Umbraco.Field("metaDescription")</p>
