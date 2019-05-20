@@ -2472,9 +2472,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StandardPage.cshtml" />
     <Content Include="Views\PageContent.cshtml" />
-    <Content Include="Views\TextBanner.cshtml" />
     <Content Include="Views\FormSection.cshtml" />
     <Content Include="Views\Partials\Form.cshtml" />
+    <Content Include="Views\BlogCategory.cshtml" />
+    <Content Include="Views\BlogCategoryFolder.cshtml" />
+    <Content Include="Views\BlogLanding.cshtml" />
+    <Content Include="Views\BlogPost.cshtml" />
+    <Content Include="Views\BlogPostFolder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
