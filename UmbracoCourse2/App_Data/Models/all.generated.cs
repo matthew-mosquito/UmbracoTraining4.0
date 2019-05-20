@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ee8b7dc94f16390d")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "543a391eb972435a")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -529,7 +529,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 	}
 
-	/// <summary>Blog category folder</summary>
+	/// <summary>Blog Category folder</summary>
 	[PublishedContentModel("blogCategoryFolder")]
 	public partial class BlogCategoryFolder : PublishedContentModel
 	{
@@ -583,7 +583,7 @@ namespace Umbraco.Web.PublishedContentModels
 
 	/// <summary>Blog Post</summary>
 	[PublishedContentModel("blogPost")]
-	public partial class BlogPost : PublishedContentModel
+	public partial class BlogPost : PublishedContentModel, ISEO
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "blogPost";
@@ -604,6 +604,105 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogPost, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Author
+		///</summary>
+		[ImplementPropertyType("author")]
+		public string Author
+		{
+			get { return this.GetPropertyValue<string>("author"); }
+		}
+
+		///<summary>
+		/// Date
+		///</summary>
+		[ImplementPropertyType("date")]
+		public DateTime Date
+		{
+			get { return this.GetPropertyValue<DateTime>("date"); }
+		}
+
+		///<summary>
+		/// Heading
+		///</summary>
+		[ImplementPropertyType("heading")]
+		public string Heading
+		{
+			get { return this.GetPropertyValue<string>("heading"); }
+		}
+
+		///<summary>
+		/// Hero Image
+		///</summary>
+		[ImplementPropertyType("heroImage")]
+		public IPublishedContent HeroImage
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("heroImage"); }
+		}
+
+		///<summary>
+		/// Post Category
+		///</summary>
+		[ImplementPropertyType("postCategory")]
+		public IPublishedContent PostCategory
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("postCategory"); }
+		}
+
+		///<summary>
+		/// Summary
+		///</summary>
+		[ImplementPropertyType("summary")]
+		public IHtmlString Summary
+		{
+			get { return this.GetPropertyValue<IHtmlString>("summary"); }
+		}
+
+		///<summary>
+		/// Title
+		///</summary>
+		[ImplementPropertyType("title")]
+		public IHtmlString Title
+		{
+			get { return this.GetPropertyValue<IHtmlString>("title"); }
+		}
+
+		///<summary>
+		/// Meta Description
+		///</summary>
+		[ImplementPropertyType("metaDescription")]
+		public IHtmlString MetaDescription
+		{
+			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaDescription(this); }
+		}
+
+		///<summary>
+		/// Meta Image
+		///</summary>
+		[ImplementPropertyType("metaImage")]
+		public IPublishedContent MetaImage
+		{
+			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaImage(this); }
+		}
+
+		///<summary>
+		/// Meta Keywords
+		///</summary>
+		[ImplementPropertyType("metaKeywords")]
+		public IHtmlString MetaKeywords
+		{
+			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaKeywords(this); }
+		}
+
+		///<summary>
+		/// Meta Title
+		///</summary>
+		[ImplementPropertyType("metaTitle")]
+		public IHtmlString MetaTitle
+		{
+			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaTitle(this); }
 		}
 	}
 
