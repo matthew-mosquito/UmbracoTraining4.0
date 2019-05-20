@@ -5,10 +5,14 @@
 
     if (pageContent != null)
     {
-        return;
-    }
-    else
-    {
-        
+        var selection = pageContent.Children.Where(x => x.IsVisible());
+
+        if (selection != null)
+        {
+            foreach (var page in selection)
+            {
+                Html.RenderPartial(page.Name);
+            }
+        }
     }
 }
