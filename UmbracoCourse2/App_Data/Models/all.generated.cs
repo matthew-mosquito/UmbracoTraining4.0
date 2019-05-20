@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "543a391eb972435a")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "3659598820fe97c1")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -296,6 +296,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public IPublishedContent Image
 		{
 			get { return this.GetPropertyValue<IPublishedContent>("image"); }
+		}
+
+		///<summary>
+		/// Link
+		///</summary>
+		[ImplementPropertyType("link")]
+		public Umbraco.Web.Models.Link Link
+		{
+			get { return this.GetPropertyValue<Umbraco.Web.Models.Link>("link"); }
 		}
 
 		///<summary>

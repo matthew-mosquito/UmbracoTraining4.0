@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{ var hello = Model.Content.GetPropertyValue("heading");}
+
+<h1>Hello from textBanner</h1>
+
+@{ var hello2 = Model.Content.GetPropertyValue("link");}
+
+@*
+    @{ if (Model.Content.GetPropertyValue("heading") != null && Model.Content.GetPropertyValue("link") != null)
+        {
+            <section class="text-banner">
+                <div class="container">
+
+                    <div>
+                        <div>
+                            <h1>@Umbraco.Field("heading")</h1>
+                            <div>Filler text</div>
+                            <p><a href="@Umbraco.Field("link")"></a>Filler link</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        }
+    }
+*@
