@@ -2473,6 +2473,8 @@
     <Content Include="Views\StandardPage.cshtml" />
     <Content Include="Views\PageContent.cshtml" />
     <Content Include="Views\TextBanner.cshtml" />
+    <Content Include="Views\FormSection.cshtml" />
+    <Content Include="Views\Partials\Form.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
