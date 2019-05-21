@@ -4,16 +4,9 @@
 	Layout = null;
 }
 
-@Html.Partial("Page Content")
+@Html.Partial("PageContent")
 
 <!-- Standard Page Properties -->
-<h1>@Umbraco.Field("heading")</h1>
+<h1>From Standard Page: @Umbraco.Field("heading")</h1>
 
 <!-- SEO Page Properties -->
-<h1>@Umbraco.Field("metaTitle")</h1>
-
-<p>@Umbraco.Field("metaDescription")</p>
-
-@Umbraco.Field("metaImage")
-
-@Umbraco.Field("metaKeywords")

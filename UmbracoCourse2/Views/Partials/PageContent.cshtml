@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 
 
+<h1>Hello from PageContent</h1>
 @{ 
     var pageContent = Model.Content.Children(new[] { "pageContent" }).FirstOrDefault();
 
@@ -12,7 +13,7 @@
         {
             foreach (var page in selection)
             {
-                Html.Partial(page.DocumentTypeAlias);
+                Html.RenderPartial(page.DocumentTypeAlias);
             }
         }
     }
