@@ -1,5 +1,5 @@
 {
-  "name": "Unknown  Form",
+  "name": "Form1",
   "created": "2019-05-20T13:01:23.5140595+01:00",
   "pages": [
     {
@@ -96,6 +96,31 @@
                     "DefaultValue": "",
                     "Placeholder": ""
                   },
+                  "preValues": []
+                },
+                {
+                  "caption": "Favourite football team",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "favouriteFootballTeam",
+                  "id": "84fdafe2-277b-420f-bbc5-7fbb62e160e7",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "containsSensitiveData": false,
+                  "mandatory": false,
+                  "regex": null,
+                  "requiredErrorMessage": null,
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {},
                   "preValues": []
                 }
               ]

@@ -4,12 +4,6 @@
 	Layout = null;
 }
 
-@Html.Partial("PageContent")
+<h1>Hi from Advanced Page Template</h1>
 
-<h1>@Umbraco.Field("metaTitle")</h1>
-
-<p>@Umbraco.Field("metaDescription")</p>
-
-@Umbraco.Field("metaImage")
-
-@Umbraco.Field("metaKeywords")
+@Html.Partial("PageContent");

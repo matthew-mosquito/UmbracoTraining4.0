@@ -2478,7 +2478,7 @@
     <Content Include="Views\BlogPost.cshtml" />
     <Content Include="Views\BlogPostFolder.cshtml" />
     <Content Include="Views\Partials\PageContent.cshtml" />
-    <Content Include="Views\Partials\RenderForm.cshtml" />
+    <Content Include="Views\Partials\formSection.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

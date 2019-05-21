@@ -1,8 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Forms.Core
+@using Umbraco.Forms.Mvc.Models
+@using Umbraco.Web
 
-
-<h1>Hello from PageContent</h1>
-@{ 
+<h1>Hi from PageContent</h1>
+@{
     var pageContent = Model.Content.Children(new[] { "pageContent" }).FirstOrDefault();
 
     if (pageContent != null)
