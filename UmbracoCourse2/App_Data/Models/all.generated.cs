@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "3681b42ffc549101")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "523f2c06053d8460")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 
 // FILE: models.generated.cs
@@ -455,6 +455,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public object FormPicker
 		{
 			get { return this.GetPropertyValue("formPicker"); }
+		}
+
+		///<summary>
+		/// Theme Picker
+		///</summary>
+		[ImplementPropertyType("themePicker")]
+		public object ThemePicker
+		{
+			get { return this.GetPropertyValue("themePicker"); }
 		}
 	}
 
