@@ -1,32 +1,40 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Web.Models
 
-@{ var hello = Model.Content.GetPropertyValue("heading");}
+<div class="container">
+    @{
+        var selection = Model.Content.FirstChild("pageContent").Children("textBanner").Where(x => x.IsVisible()).ToArray();
 
-@{ var hello2 = Model.Content.GetPropertyValue("link");}
+        foreach (var item in selection)
+        {
+            var test = item.GetPropertyValue("link");
 
-@{ 
-    var selection = Model.Content.FirstChild("pageContent").Children("textBanner")
-                    .Where(x => x.IsVisible());
-}
+            var typedRelatedLinksConverted = item.GetPropertyValue<RelatedLinks>("link");
 
-<section class="text-banner">
-    <div>
-        <div>
-            <div>
-                @if (Model.Content.GetPropertyValue("heading") != null)
-                {
-                    <h1>heading from TextBanner: @Umbraco.Field("heading")</h1>
-                }
-                @if (Model.Content.GetPropertyValue("text") != null)
-                {
-                    <div>text from TextBanner: @Umbraco.Field("text")</div>
-                }
-                @if (Model.Content.GetPropertyValue("link") != null)
-                {
-                    <p><a href="@Umbraco.Field("link")"></a>Link from TextBanner</p>
-                }
-
-            </div>
-        </div>
-    </div>
-</section>
+            <section class="text-banner">
+                <div>
+                    <div>
+                        <div>
+                            @if (item.GetPropertyValue("heading") != null)
+                            {
+                                <h1>heading from TextBanner Partial: @item.GetPropertyValue("heading")</h1>
+                            }
+                            @if (item.GetPropertyValue("text") != null)
+                            {
+                                <div>text from TextBanner Partial: @item.GetPropertyValue("text")</div>
+                            }
+                            @if (typedRelatedLinksConverted.Any())
+                            {
+                                foreach (var page in typedRelatedLinksConverted)
+                                {
+                                    var linkTarget = (page.NewWindow) ? "_blank" : null;
+                                    <p><a href="@page.Link" target="@linkTarget">@page.Caption</a></p>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+    }
+</div>

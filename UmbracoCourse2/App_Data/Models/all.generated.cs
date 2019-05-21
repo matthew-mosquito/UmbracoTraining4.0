@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "1da909ed3033fc1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "3681b42ffc549101")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -398,28 +398,28 @@ namespace Umbraco.Web.PublishedContentModels
 		///<summary>
 		/// Heading
 		///</summary>
-		[ImplementPropertyType("heading2")]
-		public IHtmlString Heading2
+		[ImplementPropertyType("heading")]
+		public IHtmlString Heading
 		{
-			get { return this.GetPropertyValue<IHtmlString>("heading2"); }
+			get { return this.GetPropertyValue<IHtmlString>("heading"); }
 		}
 
 		///<summary>
 		/// Link
 		///</summary>
-		[ImplementPropertyType("link2")]
-		public Umbraco.Web.Models.Link Link2
+		[ImplementPropertyType("link")]
+		public Umbraco.Web.Models.RelatedLinks Link
 		{
-			get { return this.GetPropertyValue<Umbraco.Web.Models.Link>("link2"); }
+			get { return this.GetPropertyValue<Umbraco.Web.Models.RelatedLinks>("link"); }
 		}
 
 		///<summary>
 		/// Text
 		///</summary>
-		[ImplementPropertyType("text2")]
-		public IHtmlString Text2
+		[ImplementPropertyType("text")]
+		public IHtmlString Text
 		{
-			get { return this.GetPropertyValue<IHtmlString>("text2"); }
+			get { return this.GetPropertyValue<IHtmlString>("text"); }
 		}
 	}
 
