@@ -15,14 +15,7 @@
         {
             foreach (var page in selection)
             {
-                if (page.DocumentTypeAlias == "formSection")
-                {
-                    Html.RenderPartial(page.DocumentTypeAlias, page);
-                }
-                else
-                {
-                    Html.RenderPartial(page.DocumentTypeAlias);
-                }
+                Html.RenderPartial(page.DocumentTypeAlias, page);
             }
         }
     }

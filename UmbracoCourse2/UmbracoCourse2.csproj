@@ -2115,7 +2115,6 @@
     <Content Include="Umbraco_Client\Ui\json2.js" />
     <Content Include="Umbraco_Client\Ui\knockout.js" />
     <Content Include="Umbraco_Client\Ui\knockout.mapping.js" />
-    <Content Include="Views\Partials\textBanner.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2479,6 +2478,7 @@
     <Content Include="Views\BlogPostFolder.cshtml" />
     <Content Include="Views\Partials\PageContent.cshtml" />
     <Content Include="Views\Partials\formSection.cshtml" />
+    <Content Include="Views\Partials\textBanner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
