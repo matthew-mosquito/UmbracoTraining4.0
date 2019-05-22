@@ -1,16 +1,17 @@
-@using Umbraco.Forms.Core
+﻿@using Umbraco.Forms.Core
 @using Umbraco.Forms.Mvc.Models
 @using Umbraco.Forms.Mvc.BusinessLogic
 @using Umbraco.Forms.MVC.Extensions
 @using Umbraco.Web
 @using ClientDependency.Core.Mvc;
 
+<H1> Hi from Partial Views/Forms/Forms.cshtml</H1>
+
 @model Umbraco.Forms.Mvc.Models.FormViewModel
 @{
     Html.EnableClientValidation(true);
     Html.EnableUnobtrusiveJavaScript(true);
 }
-
 
 
 @if (Model.SubmitHandled)

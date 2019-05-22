@@ -1,0 +1,5 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+<H1>Hi from formSection</H1>
+
+@Umbraco.RenderMacro("renderUmbracoForm", new { FormGuid = Model.Content.GetPropertyValue("formPicker"), FormTheme = Model.Content.GetPropertyValue("themePicker"), ExcludeScripts = "1" })

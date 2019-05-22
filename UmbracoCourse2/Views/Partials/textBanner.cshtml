@@ -3,38 +3,34 @@
 
 <div class="container">
     @{
-        var selection = Model.Content.FirstChild("pageContent").Children("textBanner").Where(x => x.IsVisible()).ToArray();
 
-        foreach (var item in selection)
-        {
-            var test = item.GetPropertyValue("link");
+        var test = Model.Content.GetPropertyValue("link");
 
-            var typedRelatedLinksConverted = item.GetPropertyValue<RelatedLinks>("link");
+        var typedRelatedLinksConverted = Model.Content.GetPropertyValue<RelatedLinks>("link");
 
-            <section class="text-banner">
+        <section class="text-banner">
+            <div>
                 <div>
                     <div>
-                        <div>
-                            @if (item.GetPropertyValue("heading") != null)
+                        @if (Model.Content.GetPropertyValue("heading") != null)
+                        {
+                            <h1>heading from TextBanner Partial: @Model.Content.GetPropertyValue("heading")</h1>
+                        }
+                        @if (Model.Content.GetPropertyValue("text") != null)
+                        {
+                            <div>text from TextBanner Partial: @Model.Content.GetPropertyValue("text")</div>
+                        }
+                        @if (typedRelatedLinksConverted.Any())
+                        {
+                            foreach (var page in typedRelatedLinksConverted)
                             {
-                                <h1>heading from TextBanner Partial: @item.GetPropertyValue("heading")</h1>
+                                var linkTarget = (page.NewWindow) ? "_blank" : null;
+                                <p><a href="@page.Link" target="@linkTarget">@page.Caption</a></p>
                             }
-                            @if (item.GetPropertyValue("text") != null)
-                            {
-                                <div>text from TextBanner Partial: @item.GetPropertyValue("text")</div>
-                            }
-                            @if (typedRelatedLinksConverted.Any())
-                            {
-                                foreach (var page in typedRelatedLinksConverted)
-                                {
-                                    var linkTarget = (page.NewWindow) ? "_blank" : null;
-                                    <p><a href="@page.Link" target="@linkTarget">@page.Caption</a></p>
-                                }
-                            }
-                        </div>
+                        }
                     </div>
                 </div>
-            </section>
-        }
+            </div>
+        </section>
     }
 </div>

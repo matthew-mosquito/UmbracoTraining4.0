@@ -2115,7 +2115,6 @@
     <Content Include="Umbraco_Client\Ui\json2.js" />
     <Content Include="Umbraco_Client\Ui\knockout.js" />
     <Content Include="Umbraco_Client\Ui\knockout.mapping.js" />
-    <Content Include="Views\Partials\textBanner.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2285,7 +2284,6 @@
     <Content Include="Views\Partials\Forms\Emails\Example-Template.cshtml" />
     <Content Include="Views\MacroPartials\RenderUmbracoFormScripts.cshtml" />
     <Content Include="Views\MacroPartials\InsertUmbracoFormWithTheme.cshtml" />
-    <Content Include="Views\Partials\PageContent.cshtml" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
@@ -2473,12 +2471,14 @@
     <Content Include="Views\StandardPage.cshtml" />
     <Content Include="Views\PageContent.cshtml" />
     <Content Include="Views\FormSection.cshtml" />
-    <Content Include="Views\Partials\Form.cshtml" />
     <Content Include="Views\BlogCategory.cshtml" />
     <Content Include="Views\BlogCategoryFolder.cshtml" />
     <Content Include="Views\BlogLanding.cshtml" />
     <Content Include="Views\BlogPost.cshtml" />
     <Content Include="Views\BlogPostFolder.cshtml" />
+    <Content Include="Views\Partials\PageContent.cshtml" />
+    <Content Include="Views\Partials\formSection.cshtml" />
+    <Content Include="Views\Partials\textBanner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
