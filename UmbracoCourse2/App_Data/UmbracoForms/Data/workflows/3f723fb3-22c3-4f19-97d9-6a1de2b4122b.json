@@ -7,7 +7,7 @@
   "executesOn": "Submitted",
   "settings": {
     "Email": "matthew@mosquitodigital.co.uk",
-    "SenderEmail": "",
+    "SenderEmail": "matthewwinterbottom@outlook.com",
     "Subject": "The Form '{form_name}' was submitted",
     "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
     "Attachment": ""

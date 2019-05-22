@@ -92,7 +92,10 @@
                     "logicType": "All",
                     "rules": []
                   },
-                  "settings": {},
+                  "settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
                   "preValues": []
                 },
                 {

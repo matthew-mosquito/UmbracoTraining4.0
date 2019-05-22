@@ -2480,6 +2480,8 @@
     <Content Include="Views\Partials\formSection.cshtml" />
     <Content Include="Views\Partials\textBanner.cshtml" />
     <Content Include="Views\BasePage.cshtml" />
+    <Content Include="Views\ezSearch.cshtml" />
+    <Content Include="Views\MacroPartials\ezSearch.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
