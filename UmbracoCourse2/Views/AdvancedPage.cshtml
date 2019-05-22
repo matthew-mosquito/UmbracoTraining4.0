@@ -1,9 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.AdvancedPage>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = null;
+	Layout = "BasePage.cshtml";
 }
-
-<h1>Hi from Advanced Page Template</h1>
 
 @Html.Partial("PageContent");

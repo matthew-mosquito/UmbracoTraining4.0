@@ -8,8 +8,8 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "b1a1dabd75329590")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "40e48c98cece5028")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
 // FILE: models.generated.cs
@@ -83,7 +83,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -157,7 +157,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -219,7 +219,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -308,7 +308,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -367,6 +367,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<PageContent, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Hide page?
+		///</summary>
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
+		{
+			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
 		}
 	}
 
@@ -496,9 +505,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Heading
 		///</summary>
 		[ImplementPropertyType("heading")]
-		public IHtmlString Heading
+		public string Heading
 		{
-			get { return this.GetPropertyValue<IHtmlString>("heading"); }
+			get { return this.GetPropertyValue<string>("heading"); }
 		}
 
 		///<summary>
@@ -511,7 +520,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -571,6 +580,15 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
+
+		///<summary>
+		/// Hide page?
+		///</summary>
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
+		{
+			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
+		}
 	}
 
 	/// <summary>Blog Category</summary>
@@ -596,6 +614,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogCategory, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Hide page?
+		///</summary>
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
+		{
+			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
 		}
 	}
 
@@ -688,7 +715,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -747,6 +774,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<BlogPostFolder, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Hide page?
+		///</summary>
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
+		{
+			get { return this.GetPropertyValue<bool>("umbracoNaviHide"); }
 		}
 	}
 

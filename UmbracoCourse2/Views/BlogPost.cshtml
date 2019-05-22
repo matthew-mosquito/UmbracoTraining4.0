@@ -1,23 +1,19 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogPost>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-    Layout = null;
+    Layout = "BasePage.cshtml";
 
-    var mediaGet1 = Model.Content.GetPropertyValue<IPublishedContent>("heroImage");
-    var mediaGet2 = Model.Content.GetPropertyValue<IPublishedContent>("postCategory");
+    var heroImage = Model.Content.GetPropertyValue<IPublishedContent>("heroImage");
 }
 
 
+
+<div class="jumbotron text-center">
+    <h1>@Umbraco.Field("title")</h1>
+    <p>by @Umbraco.Field("author")</p>
+</div>
+
 <div class="container">
-    
-    <div class="row">
-
-        @Umbraco.Field("title")
-        By @Umbraco.Field("author")
-        @Umbraco.Field("summary")
-        @mediaGet2.Name
-        <br />
-        <img src="@mediaGet1.Url" alt="Alternate Text" />
-
-    </div>
+    <p>@Umbraco.Field("summary")</p>
+    <img src="@heroImage.Url" class="img-thumbnail img-fluid" alt="Cinque Terre"/>
 </div>

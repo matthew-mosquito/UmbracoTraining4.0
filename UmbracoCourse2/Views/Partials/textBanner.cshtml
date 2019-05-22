@@ -1,36 +1,31 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @using Umbraco.Web.Models
 
-<div class="container">
-    @{
+@{ var typedRelatedLinksConverted = Model.Content.GetPropertyValue<RelatedLinks>("link"); }
 
-        var test = Model.Content.GetPropertyValue("link");
-
-        var typedRelatedLinksConverted = Model.Content.GetPropertyValue<RelatedLinks>("link");
-
+<div class="jumbotron text-center">
         <section class="text-banner">
             <div>
                 <div>
-                    <div>
+                    <div class="container align-self-md-center">
                         @if (Model.Content.GetPropertyValue("heading") != null)
                         {
-                            <h1>heading from TextBanner Partial: @Model.Content.GetPropertyValue("heading")</h1>
+                            <h1>@Model.Content.GetPropertyValue("heading")</h1>
                         }
                         @if (Model.Content.GetPropertyValue("text") != null)
                         {
-                            <div>text from TextBanner Partial: @Model.Content.GetPropertyValue("text")</div>
+                            @Model.Content.GetPropertyValue("text")
                         }
                         @if (typedRelatedLinksConverted.Any())
                         {
                             foreach (var page in typedRelatedLinksConverted)
                             {
                                 var linkTarget = (page.NewWindow) ? "_blank" : null;
-                                <p><a href="@page.Link" target="@linkTarget">@page.Caption</a></p>
+                                <a class="btn btn-info" role="button" href="@page.Link" target="@linkTarget">@page.Caption</a>
                             }
                         }
                     </div>
                 </div>
             </div>
         </section>
-    }
 </div>

@@ -1,5 +1,34 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogLanding>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = null;
+    Layout = "BasePage.cshtml";
 }
+
+
+@{
+    var selection = Umbraco.TypedContent(1112).Children("blogPost")
+                        .Where(x => x.IsVisible());
+}
+
+<div class="jumbotron text-center">
+    <h1>Blogs</h1>
+</div>
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Summary</th>
+        </tr>
+        @foreach (var item in selection)
+        {
+            <tr>
+                <td><a href="@item.Url">@item.Name</a></td>
+                <td>@item.GetPropertyValue("author")</td>
+                <td>@item.GetPropertyValue("heading")</td>
+            </tr>
+        }
+    </table>
+</div>
+
