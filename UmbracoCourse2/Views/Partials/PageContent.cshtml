@@ -1,10 +1,17 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<<<<<<< HEAD
 @using Umbraco.Forms.Core
 @using Umbraco.Forms.Mvc.Models
 @using Umbraco.Web
 
 <h1>Hi from PageContent</h1>
 @{
+=======
+
+
+<h1>Hello from PageContent</h1>
+@{ 
+>>>>>>> 805d17f78265c5ffeb33b56520a41b8c7519fa4c
     var pageContent = Model.Content.Children(new[] { "pageContent" }).FirstOrDefault();
 
     if (pageContent != null)
@@ -15,7 +22,11 @@
         {
             foreach (var page in selection)
             {
+<<<<<<< HEAD
                 Html.RenderPartial(page.DocumentTypeAlias, page);
+=======
+                Html.RenderPartial(page.DocumentTypeAlias);
+>>>>>>> 805d17f78265c5ffeb33b56520a41b8c7519fa4c
             }
         }
     }
