@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "523f2c06053d8460")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "b1a1dabd75329590")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -45,16 +45,16 @@ namespace Umbraco.Web.PublishedContentModels
 	public partial interface ISEO : IPublishedContent
 	{
 		/// <summary>Meta Description</summary>
-		IHtmlString MetaDescription { get; }
+		string MetaDescription { get; }
 
 		/// <summary>Meta Image</summary>
 		IPublishedContent MetaImage { get; }
 
 		/// <summary>Meta Keywords</summary>
-		IHtmlString MetaKeywords { get; }
+		string MetaKeywords { get; }
 
 		/// <summary>Meta Title</summary>
-		IHtmlString MetaTitle { get; }
+		string MetaTitle { get; }
 	}
 
 	/// <summary>SEO</summary>
@@ -86,13 +86,13 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Description
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
-		public IHtmlString MetaDescription
+		public string MetaDescription
 		{
 			get { return GetMetaDescription(this); }
 		}
 
 		/// <summary>Static getter for Meta Description</summary>
-		public static IHtmlString GetMetaDescription(ISEO that) { return that.GetPropertyValue<IHtmlString>("metaDescription"); }
+		public static string GetMetaDescription(ISEO that) { return that.GetPropertyValue<string>("metaDescription"); }
 
 		///<summary>
 		/// Meta Image
@@ -110,25 +110,25 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Keywords
 		///</summary>
 		[ImplementPropertyType("metaKeywords")]
-		public IHtmlString MetaKeywords
+		public string MetaKeywords
 		{
 			get { return GetMetaKeywords(this); }
 		}
 
 		/// <summary>Static getter for Meta Keywords</summary>
-		public static IHtmlString GetMetaKeywords(ISEO that) { return that.GetPropertyValue<IHtmlString>("metaKeywords"); }
+		public static string GetMetaKeywords(ISEO that) { return that.GetPropertyValue<string>("metaKeywords"); }
 
 		///<summary>
 		/// Meta Title
 		///</summary>
 		[ImplementPropertyType("metaTitle")]
-		public IHtmlString MetaTitle
+		public string MetaTitle
 		{
 			get { return GetMetaTitle(this); }
 		}
 
 		/// <summary>Static getter for Meta Title</summary>
-		public static IHtmlString GetMetaTitle(ISEO that) { return that.GetPropertyValue<IHtmlString>("metaTitle"); }
+		public static string GetMetaTitle(ISEO that) { return that.GetPropertyValue<string>("metaTitle"); }
 	}
 
 	/// <summary>Home Page</summary>
@@ -160,7 +160,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Description
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
-		public IHtmlString MetaDescription
+		public string MetaDescription
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaDescription(this); }
 		}
@@ -178,7 +178,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Keywords
 		///</summary>
 		[ImplementPropertyType("metaKeywords")]
-		public IHtmlString MetaKeywords
+		public string MetaKeywords
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaKeywords(this); }
 		}
@@ -187,7 +187,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Title
 		///</summary>
 		[ImplementPropertyType("metaTitle")]
-		public IHtmlString MetaTitle
+		public string MetaTitle
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaTitle(this); }
 		}
@@ -222,7 +222,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Description
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
-		public IHtmlString MetaDescription
+		public string MetaDescription
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaDescription(this); }
 		}
@@ -240,7 +240,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Keywords
 		///</summary>
 		[ImplementPropertyType("metaKeywords")]
-		public IHtmlString MetaKeywords
+		public string MetaKeywords
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaKeywords(this); }
 		}
@@ -249,7 +249,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Title
 		///</summary>
 		[ImplementPropertyType("metaTitle")]
-		public IHtmlString MetaTitle
+		public string MetaTitle
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaTitle(this); }
 		}
@@ -311,7 +311,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Description
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
-		public IHtmlString MetaDescription
+		public string MetaDescription
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaDescription(this); }
 		}
@@ -329,7 +329,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Keywords
 		///</summary>
 		[ImplementPropertyType("metaKeywords")]
-		public IHtmlString MetaKeywords
+		public string MetaKeywords
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaKeywords(this); }
 		}
@@ -338,7 +338,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Title
 		///</summary>
 		[ImplementPropertyType("metaTitle")]
-		public IHtmlString MetaTitle
+		public string MetaTitle
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaTitle(this); }
 		}
@@ -514,7 +514,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Description
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
-		public IHtmlString MetaDescription
+		public string MetaDescription
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaDescription(this); }
 		}
@@ -532,7 +532,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Keywords
 		///</summary>
 		[ImplementPropertyType("metaKeywords")]
-		public IHtmlString MetaKeywords
+		public string MetaKeywords
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaKeywords(this); }
 		}
@@ -541,7 +541,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Title
 		///</summary>
 		[ImplementPropertyType("metaTitle")]
-		public IHtmlString MetaTitle
+		public string MetaTitle
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaTitle(this); }
 		}
@@ -691,7 +691,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Description
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
-		public IHtmlString MetaDescription
+		public string MetaDescription
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaDescription(this); }
 		}
@@ -709,7 +709,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Keywords
 		///</summary>
 		[ImplementPropertyType("metaKeywords")]
-		public IHtmlString MetaKeywords
+		public string MetaKeywords
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaKeywords(this); }
 		}
@@ -718,7 +718,7 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Meta Title
 		///</summary>
 		[ImplementPropertyType("metaTitle")]
-		public IHtmlString MetaTitle
+		public string MetaTitle
 		{
 			get { return Umbraco.Web.PublishedContentModels.SEO.GetMetaTitle(this); }
 		}
