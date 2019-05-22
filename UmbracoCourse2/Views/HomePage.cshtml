@@ -2,15 +2,7 @@
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 
 @{
-    Layout = null;
+    Layout = "BasePage.cshtml";
 }
 
 @Html.Partial("PageContent")
-
-<h1>@Umbraco.Field("metaTitle")</h1>
-
-<p>@Umbraco.Field("metaDescription")</p>
-
-@Umbraco.Field("metaImage")
-
-@Umbraco.Field("metaKeywords")

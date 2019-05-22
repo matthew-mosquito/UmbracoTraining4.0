@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "b1a1dabd75329590")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e49e69f8a2fecf98")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -83,7 +83,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -157,7 +157,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -219,7 +219,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -308,7 +308,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -511,7 +511,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
@@ -688,7 +688,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Meta Description
+		/// Meta Description: #MetaDescription
 		///</summary>
 		[ImplementPropertyType("metaDescription")]
 		public string MetaDescription
