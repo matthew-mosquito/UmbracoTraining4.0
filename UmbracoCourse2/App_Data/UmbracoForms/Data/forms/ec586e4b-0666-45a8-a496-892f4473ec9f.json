@@ -25,9 +25,9 @@
                   "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
                   "dataSourceFieldKey": null,
                   "containsSensitiveData": false,
-                  "mandatory": false,
-                  "regex": null,
-                  "requiredErrorMessage": null,
+                  "mandatory": true,
+                  "regex": "",
+                  "requiredErrorMessage": "Please give your name",
                   "invalidErrorMessage": null,
                   "condition": {
                     "id": "00000000-0000-0000-0000-000000000000",
@@ -37,8 +37,8 @@
                     "rules": []
                   },
                   "settings": {
-                    "Placeholder": "John Doe",
-                    "DefaultValue": ""
+                    "DefaultValue": "",
+                    "Placeholder": "John Doe"
                   },
                   "preValues": []
                 },
@@ -53,9 +53,9 @@
                   "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
                   "dataSourceFieldKey": null,
                   "containsSensitiveData": false,
-                  "mandatory": false,
-                  "regex": null,
-                  "requiredErrorMessage": null,
+                  "mandatory": true,
+                  "regex": "^[0-9]*$",
+                  "requiredErrorMessage": "Please give your age",
                   "invalidErrorMessage": null,
                   "condition": {
                     "id": "00000000-0000-0000-0000-000000000000",
@@ -71,20 +71,20 @@
                   "preValues": []
                 },
                 {
-                  "caption": "Address",
+                  "caption": "Email",
                   "tooltip": null,
                   "placeholder": null,
                   "cssClass": null,
                   "alias": "address",
                   "id": "5825c7e0-0365-4e50-d8d3-a5bf7720cfad",
-                  "fieldTypeId": "023f09ac-1445-4bcb-b8fa-ab49f33bd046",
+                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
                   "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
                   "dataSourceFieldKey": null,
                   "containsSensitiveData": false,
-                  "mandatory": false,
-                  "regex": null,
-                  "requiredErrorMessage": null,
-                  "invalidErrorMessage": null,
+                  "mandatory": true,
+                  "regex": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+",
+                  "requiredErrorMessage": "Please give your email. We won't spam you.",
+                  "invalidErrorMessage": "Please give a valid email",
                   "condition": {
                     "id": "00000000-0000-0000-0000-000000000000",
                     "enabled": false,
@@ -92,10 +92,7 @@
                     "logicType": "All",
                     "rules": []
                   },
-                  "settings": {
-                    "DefaultValue": "",
-                    "Placeholder": ""
-                  },
+                  "settings": {},
                   "preValues": []
                 },
                 {
@@ -120,7 +117,10 @@
                     "logicType": "All",
                     "rules": []
                   },
-                  "settings": {},
+                  "settings": {
+                    "DefaultValue": "",
+                    "Placeholder": ""
+                  },
                   "preValues": []
                 }
               ]

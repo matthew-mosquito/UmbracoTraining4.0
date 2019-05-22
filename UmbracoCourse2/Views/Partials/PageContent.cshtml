@@ -3,7 +3,6 @@
 @using Umbraco.Forms.Mvc.Models
 @using Umbraco.Web
 
-<h1>Hello from PageContent</h1>
 @{ 
     var pageContent = Model.Content.Children(new[] { "pageContent" }).FirstOrDefault();
 
