@@ -694,6 +694,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\main.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="obj\Debug\UmbracoCourse2.csproj.FileListAbsolute.txt" />
@@ -2118,6 +2119,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\ezSearchBoostrapper.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -2129,7 +2131,9 @@
     <Content Include="config\imageprocessor\cache.config" />
     <Content Include="App_Plugins\ModelsBuilder\package.manifest" />
     <Content Include="Media\Web.config" />
-    <Content Include="config\umbracoSettings.config" />
+    <Content Include="config\umbracoSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="config\trees.config" />
     <Content Include="config\tinyMceConfig.config" />
     <Content Include="config\scripting.config" />
@@ -2465,17 +2469,13 @@
     <Content Include="Views\AdvancedPage.cshtml" />
     <Content Include="Views\HomePage.cshtml" />
     <Content Include="Views\RedirectParent.cshtml" />
-    <Content Include="Views\SEO.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StandardPage.cshtml" />
     <Content Include="Views\PageContent.cshtml" />
     <Content Include="Views\FormSection.cshtml" />
-    <Content Include="Views\BlogCategory.cshtml" />
-    <Content Include="Views\BlogCategoryFolder.cshtml" />
     <Content Include="Views\BlogLanding.cshtml" />
     <Content Include="Views\BlogPost.cshtml" />
-    <Content Include="Views\BlogPostFolder.cshtml" />
     <Content Include="Views\Partials\PageContent.cshtml" />
     <Content Include="Views\Partials\formSection.cshtml" />
     <Content Include="Views\Partials\textBanner.cshtml" />

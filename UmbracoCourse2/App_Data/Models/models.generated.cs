@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "48fce87d69df5770")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5927dc27122dca83")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -669,6 +669,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public IPublishedContent HeroImage
 		{
 			get { return this.GetPropertyValue<IPublishedContent>("heroImage"); }
+		}
+
+		///<summary>
+		/// Images
+		///</summary>
+		[ImplementPropertyType("images")]
+		public IEnumerable<IPublishedContent> Images
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("images"); }
 		}
 
 		///<summary>
