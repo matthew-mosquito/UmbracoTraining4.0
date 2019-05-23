@@ -14,6 +14,10 @@
 </div>
 
 <div class="container">
-    <p>@Umbraco.Field("summary")</p>
-    <img src="@heroImage.Url" class="img-thumbnail img-fluid" alt="Cinque Terre"/>
+    <div class="row">
+        <div class="col-sm-12">
+            <p>@Umbraco.Field("summary")</p>
+            <img src="@heroImage.Url" class="rounded-circle img-thumbnail img-fluid mx-auto d-block"/>
+        </div>
+    </div>
 </div>

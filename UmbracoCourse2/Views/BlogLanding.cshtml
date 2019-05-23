@@ -15,19 +15,23 @@
 </div>
 
 <div class="container">
-    <table class="table">
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Summary</th>
-        </tr>
-        @foreach (var item in selection)
-        {
-            <tr>
-                <td><a href="@item.Url">@item.Name</a></td>
-                <td>@item.GetPropertyValue("author")</td>
-                <td>@item.GetPropertyValue("heading")</td>
-            </tr>
-        }
-    </table>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Summary</th>
+                </tr>
+                @foreach (var item in selection)
+                {
+                    <tr>
+                        <td><a href="@item.Url">@item.Name</a></td>
+                        <td>@item.GetPropertyValue("author")</td>
+                        <td>@item.GetPropertyValue("heading")</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
 </div>

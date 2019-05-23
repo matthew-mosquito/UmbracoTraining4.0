@@ -4,28 +4,28 @@
 @{ var typedRelatedLinksConverted = Model.Content.GetPropertyValue<RelatedLinks>("link"); }
 
 <div class="jumbotron text-center">
-        <section class="text-banner">
-            <div>
-                <div>
-                    <div class="container align-self-md-center">
-                        @if (Model.Content.GetPropertyValue("heading") != null)
+    <section class="text-banner">
+        <div class="container align-self-md-center">
+            <div class="row">
+                <div class="col-md-12">
+                    @if (Umbraco.Field("heading") != null)
+                    {
+                        <h1>@Umbraco.Field("heading")</h1>
+                    }
+                    @if (Umbraco.Field("text") != null)
+                    {
+                        @Umbraco.Field("text")
+                    }
+                    @if (typedRelatedLinksConverted.Any())
+                    {
+                        foreach (var page in typedRelatedLinksConverted)
                         {
-                            <h1>@Model.Content.GetPropertyValue("heading")</h1>
+                            var linkTarget = (page.NewWindow) ? "_blank" : null;
+                            <a class="btn btn-info" role="button" href="@page.Link" target="@linkTarget">@page.Caption</a>
                         }
-                        @if (Model.Content.GetPropertyValue("text") != null)
-                        {
-                            @Model.Content.GetPropertyValue("text")
-                        }
-                        @if (typedRelatedLinksConverted.Any())
-                        {
-                            foreach (var page in typedRelatedLinksConverted)
-                            {
-                                var linkTarget = (page.NewWindow) ? "_blank" : null;
-                                <a class="btn btn-info" role="button" href="@page.Link" target="@linkTarget">@page.Caption</a>
-                            }
-                        }
-                    </div>
+                    }
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 </div>
