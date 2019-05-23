@@ -1,9 +1,12 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogPost>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
+
 @{
     Layout = "BasePage.cshtml";
 
     var heroImage = Model.Content.GetPropertyValue<IPublishedContent>("heroImage");
+
+    var imageList = Model.Content.GetPropertyValue<IEnumerable<IPublishedContent>>("images");
 }
 
 
@@ -17,7 +20,18 @@
     <div class="row">
         <div class="col-sm-12">
             <p>@Umbraco.Field("summary")</p>
-            <img src="@heroImage.Url" class="rounded-circle img-thumbnail img-fluid mx-auto d-block"/>
+            <img src="@heroImage.Url" class="rounded-circle img-thumbnail img-fluid mx-auto d-block" style="width: 300px; height: 500px;"/>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @foreach (var image in imageList)
+            {
+                <img src="@image.Url" class="img-thumbnail img-fluid test"/>
+            }
         </div>
     </div>
 </div>
