@@ -694,6 +694,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\main.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="obj\Debug\UmbracoCourse2.csproj.FileListAbsolute.txt" />
@@ -2468,13 +2469,11 @@
     <Content Include="Views\AdvancedPage.cshtml" />
     <Content Include="Views\HomePage.cshtml" />
     <Content Include="Views\RedirectParent.cshtml" />
-    <Content Include="Views\SEO.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StandardPage.cshtml" />
     <Content Include="Views\PageContent.cshtml" />
     <Content Include="Views\FormSection.cshtml" />
-    <Content Include="Views\BlogCategory.cshtml" />
     <Content Include="Views\BlogLanding.cshtml" />
     <Content Include="Views\BlogPost.cshtml" />
     <Content Include="Views\Partials\PageContent.cshtml" />
